@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sylvain Boué - Growth Lead & Product Manager</title>
+    <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #d4ff00;
+            --bg-color: #420E58;
+            --text-color: #ffffff;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Rajdhani', sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: white;
+        }
+
+        .container {
+            max-width: 210mm;
+            margin: 0 auto;
+            padding: 20mm;
+        }
+
+        .header {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+            margin-bottom: 2rem;
+            background-color: var(--bg-color);
+            padding: 2rem;
+            border-radius: 8px;
+        }
+
+        .profile-image {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            border: 3px solid var(--primary-color);
+        }
+
+        .header-content h1 {
+            color: var(--primary-color);
+            font-size: 2.5rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .header-content p {
+            color: var(--text-color);
+            font-size: 1.2rem;
+        }
+
+        .section {
+            margin-bottom: 2rem;
+        }
+
+        .section-title {
+            color: var(--bg-color);
+            font-size: 1.8rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+            border-bottom: 2px solid var(--primary-color);
+            padding-bottom: 0.5rem;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .skill-chip {
+            background-color: var(--bg-color);
+            color: var(--primary-color);
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            font-size: 1rem;
+            display: inline-block;
+        }
+
+        .experience-item {
+            margin-bottom: 1.5rem;
+        }
+
+        .experience-item h3 {
+            color: var(--bg-color);
+            font-size: 1.3rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .experience-item .period {
+            color: var(--bg-color);
+            font-weight: 500;
+            margin-bottom: 0.5rem;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .stat-card {
+            background-color: var(--bg-color);
+            padding: 1rem;
+            border-radius: 4px;
+        }
+
+        .stat-card h4 {
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-card .value {
+            color: white;
+            font-size: 1.5rem;
+            font-weight: 600;
+        }
+
+        .contact-info {
+            color: var(--text-color);
+            margin-top: 1rem;
+        }
+
+        .contact-info a {
+            color: var(--text-color);
+            text-decoration: none;
+        }
+
+        @media print {
+            body {
+                background: white;
+            }
+            .container {
+                padding: 0;
+            }
+            .header {
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+            }
+            .stat-card {
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <img src="/assets/profile.jpg" alt="Sylvain Boué" class="profile-image">
+            <div class="header-content">
+                <h1>Sylvain Boué</h1>
+                <p>Growth Lead & Product Manager • Yunico</p>
+                <div class="contact-info">
+                    <p>📍 Wissous - 91320</p>
+                    <p>📧 sylvain.boue@yunico.fr</p>
+                    <p>🔗 <a href="https://www.linkedin.com/in/sylvainboue/">linkedin.com/in/sylvainboue</a></p>
+                </div>
+            </div>
+        </header>
+
+        <section class="section">
+            <h2 class="section-title">Profil</h2>
+            <p>Passionné par l'innovation et le développement B2B, j'ai développé une expertise unique qui combine growth marketing et product management. Mon parcours m'a permis de comprendre les enjeux complexes du marché B2B et de développer des solutions adaptées.</p>
+        </section>
+
+        <section class="section">
+            <h2 class="section-title">Compétences Clés</h2>
+            <div class="skills-grid">
+                <span class="skill-chip">Growth Marketing</span>
+                <span class="skill-chip">Product Management</span>
+                <span class="skill-chip">Communication Digitale</span>
+                <span class="skill-chip">Marketing B2B</span>
+                <span class="skill-chip">Management</span>
+                <span class="skill-chip">Stratégie Business</span>
+                <span class="skill-chip">Analytics</span>
+                <span class="skill-chip">Leadership</span>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2 class="section-title">Réalisations Marketing</h2>
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <h4>Pipeline Total Généré</h4>
+                    <div class="value">1.15M€</div>
+                    <p>+35% sur 12 mois</p>
+                </div>
+                <div class="stat-card">
+                    <h4>ROI Moyen</h4>
+                    <div class="value">380%</div>
+                    <p>Toutes campagnes</p>
+                </div>
+                <div class="stat-card">
+                    <h4>Leads Qualifiés</h4>
+                    <div class="value">415</div>
+                    <p>B2B Tech & SaaS</p>
+                </div>
+                <div class="stat-card">
+                    <h4>Taux de Conversion</h4>
+                    <div class="value">10.2%</div>
+                    <p>Lead → Client</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2 class="section-title">Campagnes Notables</h2>
+            <div class="experience-item">
+                <h3>Campagne B2B SaaS Q4 2023</h3>
+                <p class="period">Multi-canal • ROI: 420%</p>
+                <p>• Pipeline généré : 450K€</p>
+                <p>• 180 leads qualifiés</p>
+                <p>• Taux de conversion : 8.5%</p>
+            </div>
+            <div class="experience-item">
+                <h3>ABM Tech Leaders Q3 2023</h3>
+                <p class="period">LinkedIn + Email • ROI: 380%</p>
+                <p>• Pipeline généré : 320K€</p>
+                <p>• 85 leads qualifiés</p>
+                <p>• Taux de conversion : 12.8%</p>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2 class="section-title">Expertise</h2>
+            <div class="experience-item">
+                <h3>🎯 Growth & Product Management</h3>
+                <p>• Développement et mise en œuvre de stratégies de croissance B2B</p>
+                <p>• Gestion de produit et amélioration continue des fonctionnalités</p>
+                <p>• Analyse des besoins clients et définition de la roadmap produit</p>
+                <p>• Optimisation des processus de conversion et d'acquisition</p>
+            </div>
+            <div class="experience-item">
+                <h3>💡 Leadership & Innovation</h3>
+                <p>• Direction d'équipes pluridisciplinaires</p>
+                <p>• Mise en place de méthodologies agiles</p>
+                <p>• Innovation dans les approches marketing et produit</p>
+                <p>• Développement de solutions B2B innovantes</p>
+            </div>
+        </section>
+    </div>
+</body>
+</html>
