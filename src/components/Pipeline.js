@@ -46,7 +46,7 @@ const initialColumns = {
       {
         id: '2',
         title: 'Account Manager',
-        company: 'Avec Vous ?',
+        company: 'Avec vous 😉',
         contact: 'Sylvain Boué',
         deadline: '2025-02-20',
       },
@@ -64,7 +64,7 @@ const initialColumns = {
       {
         id: '3',
         title: 'Growth Lead',
-        company: 'Vos Concurrents 😉',
+        company: 'Vos Concurrents',
         contact: 'Sylvain Boué',
         deadline: '2025-02-10',
       },

@@ -5,7 +5,7 @@ import {
   Campaign as CampaignIcon,
   Groups as PartnershipsIcon,
   Assessment as PerformanceIcon,
-  EmojiEvents as EventIcon
+  TrendingUp as TrendingUpIcon
 } from '@mui/icons-material';
 
 const features = [
@@ -25,9 +25,9 @@ const features = [
     description: 'Analyse des KPIs et optimisation continue des dispositifs pour maximiser l\'impact des projets'
   },
   {
-    icon: <EventIcon sx={{ fontSize: 40 }} />,
-    title: 'ÉVÉNEMENTIEL',
-    description: 'Organisation et présence sur les viewing parties, tournages et activations partenaires'
+    icon: <TrendingUpIcon sx={{ fontSize: 40 }} />,
+    title: 'GROWTH MANAGEMENT',
+    description: 'Élaboration et mise en œuvre de stratégies de croissance, avec une augmentation moyenne de 150% des KPIs clés'
   }
 ];
 

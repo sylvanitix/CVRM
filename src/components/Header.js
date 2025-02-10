@@ -2,16 +2,13 @@ import React from 'react';
 import {
   AppBar,
   Toolbar,
-  Typography,
   IconButton,
   Box,
   Button,
   useTheme,
 } from '@mui/material';
 import {
-  Twitter as TwitterIcon,
-  YouTube as YouTubeIcon,
-  Instagram as InstagramIcon,
+  LinkedIn as LinkedInIcon,
   Menu as MenuIcon,
 } from '@mui/icons-material';
 
@@ -63,6 +60,7 @@ export default function Header({ onMenuClick }) {
         <Box sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
           <Button
             variant="outlined"
+            href="mailto:sylvanitixx@gmail.com"
             sx={{
               borderColor: theme.palette.primary.main,
               color: theme.palette.primary.main,
@@ -77,7 +75,7 @@ export default function Header({ onMenuClick }) {
 
           <Box sx={{ display: 'flex', gap: 1, ml: 2 }}>
             <IconButton
-              href="https://twitter.com/GentleMates"
+              href="https://www.linkedin.com/in/sylvain-boué-851968176/"
               target="_blank"
               rel="noopener noreferrer"
               sx={{
@@ -87,33 +85,7 @@ export default function Header({ onMenuClick }) {
                 },
               }}
             >
-              <TwitterIcon />
-            </IconButton>
-            <IconButton
-              href="https://www.youtube.com/@GentleMates"
-              target="_blank"
-              rel="noopener noreferrer"
-              sx={{
-                color: theme.palette.primary.main,
-                '&:hover': {
-                  backgroundColor: 'rgba(212, 255, 0, 0.1)',
-                },
-              }}
-            >
-              <YouTubeIcon />
-            </IconButton>
-            <IconButton
-              href="https://www.instagram.com/gentlemates"
-              target="_blank"
-              rel="noopener noreferrer"
-              sx={{
-                color: theme.palette.primary.main,
-                '&:hover': {
-                  backgroundColor: 'rgba(212, 255, 0, 0.1)',
-                },
-              }}
-            >
-              <InstagramIcon />
+              <LinkedInIcon />
             </IconButton>
           </Box>
         </Box>

@@ -20,7 +20,7 @@ const projects = {
       description: "Présentation détaillée du projet SkillCamp 2024, incluant les opportunités de partenariat et les différentes offres de sponsoring.",
       pdfUrl: "/assets/pdf/DOSSIER_DE_SPONSORING_-_2024_SKILLCAMP_1.pdf",
       tags: ["Sponsoring", "Esport", "Event"],
-      collaboration: "Document réalisé en collaboration avec l'équipe SkillCamp"
+      collaboration: "Document non soumis à une NDA, réalisé en collaboration avec l'équipe SkillCamp"
     },
     {
       id: 2,
@@ -29,7 +29,7 @@ const projects = {
       description: "Présentation du projet NumberOne 2022, un événement majeur dans l'écosystème esport.",
       pdfUrl: "/assets/pdf/NumberOne2022.pdf",
       tags: ["Esport", "Event", "Competition"],
-      collaboration: "Document réalisé en collaboration avec l'équipe NumberOne"
+      collaboration: "Document non soumis à une NDA, réalisé en collaboration avec l'équipe NumberOne"
     },
     {
       id: 3,
@@ -38,7 +38,7 @@ const projects = {
       description: "Dossier de sponsoring spécifique pour l'événement Louvardgame, détaillant les opportunités de partenariat.",
       pdfUrl: "/assets/pdf/Louvardgame sponsoring.pdf",
       tags: ["Event", "Gaming", "Sponsoring"],
-      collaboration: "Document réalisé en collaboration avec l'équipe Louvardgame"
+      collaboration: "Document non soumis à une NDA, réalisé en collaboration avec l'équipe Louvardgame"
     },
     {
       id: 4,
@@ -47,7 +47,7 @@ const projects = {
       description: "Présentation générale des opportunités de partenariat et de sponsoring pour Grizi Esport, avec une approche moderne et innovante.",
       pdfUrl: "/assets/pdf/DOSSER_SPONSORSHIP_GENERAL_2.0_3.pdf",
       tags: ["Sponsoring", "Business", "Partnership"],
-      collaboration: "Document réalisé en collaboration avec l'équipe Grizi Esport"
+      collaboration: "Document non soumis à une NDA, réalisé en collaboration avec l'équipe Grizi Esport"
     },
     {
       id: 5,
@@ -58,9 +58,9 @@ const projects = {
     },
     {
       id: 6,
-      title: "Intervenant Event - Epsilon Esport",
+      title: "Intervenant Event - Grizi Esport",
       type: "project",
-      description: "Animation et présentation lors d'événements majeurs pour Epsilon Esport. Rôles : présentation des équipes, animation des temps forts, interviews des joueurs et coachs, analyse des matchs en direct. Contribution à la production de contenu événementiel et à l'engagement communautaire. Organisation et supervision des tournois amateurs et semi-professionnels.",
+      description: "Animation et présentation lors d'événements majeurs pour Grizi Esport. Rôles : présentation des équipes, animation des temps forts, interviews des joueurs et coachs, analyse des matchs en direct. Contribution à la production de contenu événementiel et à l'engagement communautaire. Organisation et supervision des tournois amateurs et semi-professionnels.",
       tags: ["Esport", "Event Management", "Animation", "Production", "Community"]
     }
   ],

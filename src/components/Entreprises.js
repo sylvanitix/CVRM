@@ -28,7 +28,7 @@ const companies = [
     description: 'Développement de stratégies de growth hacking B2B pour maximiser la croissance et l\'acquisition de clients.',
     skills: ['Growth Hacking', 'Marketing B2B', 'Prospection'],
     score: 100,
-    period: 'Déc. 2024 - Aujourd\'hui',
+    period: 'Déc. 2024 - Présent',
     location: 'À distance'
   },
   {
@@ -39,7 +39,7 @@ const companies = [
     description: 'Utilisation de HubSpot comme CRM central, Sales Navigator pour l\'identification des prospects, et Lemlist pour l\'automatisation des séquences d\'emails. Mise en place de stratégies d\'acquisition et optimisation continue du ROI.',
     skills: ['Growth Hacking', 'Marketing B2B', 'CRM', 'Automatisation'],
     score: 100,
-    period: 'Juin 2024 - Aujourd\'hui',
+    period: 'Juin 2024 - Présent',
     location: 'À distance'
   },
   {
@@ -50,7 +50,7 @@ const companies = [
     description: 'Structure E-sport en division 2 LFL. Gestion des partenariats et développement commercial.',
     skills: ['Partenariats', 'E-sport', 'Développement commercial'],
     score: 95,
-    period: 'Mars 2024 - Aujourd\'hui',
+    period: 'Mars 2024 - Présent',
     location: 'Paris'
   },
   {
@@ -88,7 +88,18 @@ const companies = [
   },
   {
     id: 7,
-    name: 'Epsilon eSports',
+    name: 'Grizi esport',
+    role: 'Account Manager • Stage',
+    status: 'Expérience Passée',
+    description: 'Participation à la rédaction du dossier de sponsoring, et identification des personas.',
+    skills: ['Sponsoring', 'Marketing', 'E-sport', 'Business Development'],
+    score: 78,
+    period: 'Juil. 2021 - Déc. 2021',
+    location: 'Paris'
+  },
+  {
+    id: 8,
+    name: 'Epsilon Esport',
     role: 'Communication 360° • Stage',
     status: 'Expérience Passée',
     description: 'Organisation d\'événements, gestion de projet, coordination des équipes et promotion événementielle.',
@@ -171,9 +182,27 @@ export default function Entreprises() {
                       <Typography variant="subtitle1" sx={{ fontWeight: 500 }}>
                         {company.name}
                       </Typography>
-                      <Typography variant="body2" color="text.secondary">
-                        {company.role}
-                      </Typography>
+                      <Box sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
+                        <Typography variant="body2" color="text.secondary">
+                          {company.role.split('•')[0].trim()}
+                        </Typography>
+                        {company.role.toLowerCase().includes('freelance') && (
+                          <Chip
+                            label="Freelance"
+                            size="small"
+                            sx={{
+                              bgcolor: 'primary.main',
+                              color: 'white',
+                              height: '20px',
+                              '& .MuiChip-label': { 
+                                px: 1,
+                                fontSize: '0.7rem',
+                                fontWeight: 500
+                              }
+                            }}
+                          />
+                        )}
+                      </Box>
                     </Box>
                   </Box>
                 </TableCell>
@@ -182,8 +211,8 @@ export default function Entreprises() {
                     label={company.status}
                     size="small"
                     sx={{ 
-                      bgcolor: company.status === 'En Poste' ? 'success.light' : 'grey.100',
-                      color: company.status === 'En Poste' ? 'success.dark' : 'text.secondary',
+                      bgcolor: company.status === 'En Poste' ? 'success.light' : 'rgba(212, 255, 0, 0.1)',
+                      color: company.status === 'En Poste' ? 'success.dark' : '#d4ff00',
                       '& .MuiChip-label': { px: 1 }
                     }}
                   />

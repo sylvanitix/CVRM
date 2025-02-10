@@ -26,34 +26,34 @@ function GrowthAssistant() {
 
   const growthTips = [
     {
-      title: "Astuce Growth #1",
-      content: "Utilisez LinkedIn pour partager du contenu qui montre votre expertise en Growth. Cela augmente votre visibilité de 40%.",
-      tag: "LinkedIn Strategy"
+      title: "🎮 Gaming",
+      content: "Passionné de jeux vidéo depuis toujours, avec une préférence pour les jeux compétitifs et les RPG. Fan de League of Legends et d'Esport.",
+      tag: "Gaming"
     },
     {
-      title: "Conseil Acquisition #2",
-      content: "Les emails personnalisés ont un taux d'ouverture 26% plus élevé. Mentionnez un accomplissement spécifique du recruteur.",
-      tag: "Email Marketing"
+      title: "💪 Sport",
+      content: "Pratique régulière du sport en salle et de la musculation. Le sport est un excellent moyen de garder l'équilibre entre vie professionnelle et personnelle.",
+      tag: "Sport"
     },
     {
-      title: "Hack Visibilité #3",
-      content: "Commentez de manière pertinente sur les posts LinkedIn des recruteurs ciblés. 30% de chances d'engagement en plus.",
-      tag: "Engagement"
+      title: "💻 Tech",
+      content: "Passionné par les nouvelles technologies, l'IA et le développement. Toujours à l'affût des dernières innovations dans le domaine du digital.",
+      tag: "Tech"
     },
     {
-      title: "Astuce Personal Branding",
-      content: "Créez une série de posts courts sur vos succès en Growth. Format : Problème → Solution → Résultats.",
-      tag: "Content"
+      title: "✈️ Voyage",
+      content: "Amateur de voyages et de découvertes culturelles. Chaque destination est une opportunité d'apprendre et de s'ouvrir à de nouvelles perspectives.",
+      tag: "Travel"
     }
   ];
 
   const profileStats = {
-    viewsToday: 45,
-    viewsIncrease: "+28%",
-    searchAppearances: 158,
-    profileScore: 92,
-    topSkills: ["Growth Hacking", "Product", "B2B SaaS"],
-    activeRecruiters: 12
+    hobbies: 4,
+    mainPassion: "Gaming & Tech",
+    activeYears: 15,
+    engagementLevel: 92,
+    topInterests: ["Jeux vidéo", "Sport", "Tech", "Voyage"],
+    favGames: ["League of Legends", "RPGs"]
   };
 
   const handleClick = (event) => {
@@ -167,47 +167,50 @@ function GrowthAssistant() {
                 <Box sx={{ display: 'flex', alignItems: 'center', gap: 1, mb: 3 }}>
                   <InsightsIcon color="primary" />
                   <Typography variant="h6">
-                    Statistiques du jour
+                    Statistiques des passions
                   </Typography>
                 </Box>
                 <Box sx={{ display: 'flex', justifyContent: 'space-between', mb: 2 }}>
                   <Typography variant="body2" color="text.secondary">
-                    Vues aujourd'hui
-                  </Typography>
-                  <Box sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
-                    <Typography variant="body1" fontWeight="bold">
-                      {profileStats.viewsToday}
-                    </Typography>
-                    <Typography variant="body2" color="success.main">
-                      {profileStats.viewsIncrease}
-                    </Typography>
-                  </Box>
-                </Box>
-                <Box sx={{ display: 'flex', justifyContent: 'space-between', mb: 2 }}>
-                  <Typography variant="body2" color="text.secondary">
-                    Apparitions recherche
+                    Loisirs
                   </Typography>
                   <Typography variant="body1" fontWeight="bold">
-                    {profileStats.searchAppearances}
+                    {profileStats.hobbies}
                   </Typography>
                 </Box>
                 <Box sx={{ display: 'flex', justifyContent: 'space-between', mb: 2 }}>
                   <Typography variant="body2" color="text.secondary">
-                    Score profil
+                    Passion principale
                   </Typography>
                   <Typography variant="body1" fontWeight="bold">
-                    {profileStats.profileScore}%
+                    {profileStats.mainPassion}
+                  </Typography>
+                </Box>
+                <Box sx={{ display: 'flex', justifyContent: 'space-between', mb: 2 }}>
+                  <Typography variant="body2" color="text.secondary">
+                    Années d'activité
+                  </Typography>
+                  <Typography variant="body1" fontWeight="bold">
+                    {profileStats.activeYears}
+                  </Typography>
+                </Box>
+                <Box sx={{ display: 'flex', justifyContent: 'space-between', mb: 2 }}>
+                  <Typography variant="body2" color="text.secondary">
+                    Niveau d'engagement
+                  </Typography>
+                  <Typography variant="body1" fontWeight="bold">
+                    {profileStats.engagementLevel}%
                   </Typography>
                 </Box>
                 <Box sx={{ mb: 2 }}>
                   <Typography variant="body2" color="text.secondary" gutterBottom>
-                    Top compétences
+                    Intérêts principaux
                   </Typography>
                   <Box sx={{ display: 'flex', gap: 1, flexWrap: 'wrap' }}>
-                    {profileStats.topSkills.map((skill) => (
+                    {profileStats.topInterests.map((interest) => (
                       <Chip
-                        key={skill}
-                        label={skill}
+                        key={interest}
+                        label={interest}
                         size="small"
                         variant="outlined"
                       />
@@ -216,11 +219,18 @@ function GrowthAssistant() {
                 </Box>
                 <Box sx={{ display: 'flex', justifyContent: 'space-between', mb: 1 }}>
                   <Typography variant="body2" color="text.secondary">
-                    Recruteurs actifs
+                    Jeux favoris
                   </Typography>
-                  <Typography variant="body1" fontWeight="bold">
-                    {profileStats.activeRecruiters}
-                  </Typography>
+                  <Box sx={{ display: 'flex', gap: 1, flexWrap: 'wrap' }}>
+                    {profileStats.favGames.map((game) => (
+                      <Chip
+                        key={game}
+                        label={game}
+                        size="small"
+                        variant="outlined"
+                      />
+                    ))}
+                  </Box>
                 </Box>
               </>
             )}

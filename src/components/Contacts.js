@@ -27,25 +27,30 @@ export const contacts = [
     skills: ['Growth', 'Product', 'Communication digitale', 'Marketing', 'Management'],
     score: '100%',
     period: 'Juin 2024 - Présent',
-    description: `Passionné par l'innovation et le développement B2B, j'ai développé une expertise unique qui combine growth marketing et product management. Mon parcours m'a permis de comprendre les enjeux complexes du marché B2B et de développer des solutions adaptées.
-
-🎯 Growth & Product Management :
-• Développement et mise en œuvre de stratégies de croissance B2B
-• Gestion de produit et amélioration continue des fonctionnalités
-• Analyse des besoins clients et définition de la roadmap produit
-• Optimisation des processus de conversion et d'acquisition
-
-💡 Leadership & Innovation :
-• Direction d'équipes pluridisciplinaires
-• Mise en place de méthodologies agiles
-• Innovation dans les approches marketing et produit
-• Développement de solutions B2B innovantes
-
-🚀 Résultats & Impact :
-• Croissance significative des métriques clés
-• Amélioration de la satisfaction client
-• Optimisation des processus internes
-• Développement de nouvelles fonctionnalités à forte valeur ajoutée`,
+    introduction: `Passionné par l'innovation et le développement B2B, j'ai développé une expertise unique qui combine growth marketing et product management. Mon parcours m'a permis de comprendre les enjeux complexes du marché B2B et de développer des solutions adaptées.`,
+    formation: [
+      'M2 Communication digitale - ECS Paris (2023)',
+      'M1 Event, relations presse / publique - ECS Paris (2022)',
+      'Bachelor Communication & Marketing - ECS Paris (2019)'
+    ],
+    growthManagement: [
+      'Développement et mise en œuvre de stratégies de croissance B2B',
+      'Gestion de produit et amélioration continue des fonctionnalités',
+      'Analyse des besoins clients et définition de la roadmap produit',
+      'Optimisation des processus de conversion et d\'acquisition'
+    ],
+    leadership: [
+      'Direction d\'équipes pluridisciplinaires',
+      'Mise en place de méthodologies agiles',
+      'Innovation dans les approches marketing et produit',
+      'Développement de solutions B2B innovantes'
+    ],
+    results: [
+      'Croissance significative des métriques clés',
+      'Amélioration de la satisfaction client',
+      'Optimisation des processus internes',
+      'Développement de nouvelles fonctionnalités à forte valeur ajoutée'
+    ],
     avatar: '/assets/profile.jpg',
     location: 'Wissous - 91320',
     email: 'sylvain.boue@yunico.fr',
@@ -53,7 +58,7 @@ export const contacts = [
   }
 ];
 
-function Contacts() {
+export default function Contacts() {
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedContact, setSelectedContact] = useState(null);
 
@@ -63,6 +68,47 @@ function Contacts() {
 
   const handleCloseDialog = () => {
     setSelectedContact(null);
+  };
+
+  const renderSection = (title, items, icon) => {
+    if (!items || items.length === 0) return null;
+    
+    return (
+      <Box sx={{ mb: 4 }}>
+        <Typography sx={{ 
+          color: '#d4ff00',
+          fontSize: '1rem',
+          fontWeight: 600,
+          mb: 2,
+          display: 'flex',
+          alignItems: 'center',
+          gap: 1
+        }}>
+          <span>{icon}</span>
+          {title}
+        </Typography>
+        <Box sx={{ display: 'flex', flexDirection: 'column', gap: 1 }}>
+          {items.map((item, index) => (
+            <Typography 
+              key={index}
+              sx={{ 
+                color: 'white',
+                fontSize: '0.875rem',
+                display: 'flex',
+                alignItems: 'flex-start',
+                '&:before': {
+                  content: '"•"',
+                  color: '#d4ff00',
+                  marginRight: '8px'
+                }
+              }}
+            >
+              {item}
+            </Typography>
+          ))}
+        </Box>
+      </Box>
+    );
   };
 
   return (
@@ -223,12 +269,18 @@ function Contacts() {
       <Dialog
         open={Boolean(selectedContact)}
         onClose={handleCloseDialog}
-        maxWidth="md"
+        maxWidth="lg"
         PaperProps={{
           sx: {
             bgcolor: '#420E58',
             color: 'white',
-            minWidth: 600,
+            width: '90%',
+            maxWidth: '1000px',
+            borderRadius: '4px',
+            '& .MuiDialogContent-root': {
+              bgcolor: '#420E58',
+              padding: '32px'
+            }
           },
         }}
       >
@@ -240,14 +292,17 @@ function Contacts() {
               justifyContent: 'space-between',
               alignItems: 'center',
               borderBottom: '1px solid rgba(255, 255, 255, 0.1)',
-              pb: 2
+              padding: '24px 32px',
+              bgcolor: '#420E58',
+              borderTopLeftRadius: '4px',
+              borderTopRightRadius: '4px',
             }}>
               <Box sx={{ display: 'flex', alignItems: 'center', gap: 2 }}>
                 <Avatar 
                   src={selectedContact.avatar}
                   sx={{ 
-                    width: 48,
-                    height: 48,
+                    width: 64,
+                    height: 64,
                     border: '2px solid rgba(212, 255, 0, 0.3)'
                   }}
                 />
@@ -267,15 +322,27 @@ function Contacts() {
                 <CloseIcon />
               </IconButton>
             </DialogTitle>
-            <DialogContent sx={{ mt: 2 }}>
-              <Typography sx={{ 
-                color: 'white',
-                whiteSpace: 'pre-line',
-                fontSize: '0.875rem',
-                lineHeight: 1.6
+            <DialogContent>
+              <Box sx={{ 
+                bgcolor: '#420E58',
+                padding: '32px',
+                margin: '-32px',
+                width: 'calc(100% + 64px)'
               }}>
-                {selectedContact.description}
-              </Typography>
+                <Typography sx={{ 
+                  color: 'white',
+                  fontSize: '0.875rem',
+                  mb: 3,
+                  lineHeight: 1.6
+                }}>
+                  {selectedContact.introduction}
+                </Typography>
+
+                {renderSection('Formation', selectedContact.formation, '📚')}
+                {renderSection('Growth & Product Management', selectedContact.growthManagement, '🎯')}
+                {renderSection('Leadership & Innovation', selectedContact.leadership, '💡')}
+                {renderSection('Résultats & Impact', selectedContact.results, '🚀')}
+              </Box>
             </DialogContent>
           </>
         )}
@@ -283,5 +350,3 @@ function Contacts() {
     </Box>
   );
 }
-
-export default Contacts;

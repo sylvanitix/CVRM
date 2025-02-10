@@ -72,28 +72,28 @@ function Marketing() {
     {
       title: 'Pipeline Total Généré',
       value: '1.15M€',
-      trend: '+35%',
+      trend: '35%',
       icon: <MonetizationOnIcon />,
       description: 'Sur 12 mois'
     },
     {
       title: 'Leads Qualifiés',
       value: '415',
-      trend: '+42%',
+      trend: '42%',
       icon: <GroupIcon />,
       description: 'B2B Tech & SaaS'
     },
     {
       title: 'ROI Moyen',
       value: '380%',
-      trend: '+28%',
+      trend: '28%',
       icon: <TrendingUpIcon />,
       description: 'Toutes campagnes'
     },
     {
       title: 'Taux de Conversion',
       value: '10.2%',
-      trend: '+3.5pts',
+      trend: '3.5%',
       icon: <TimelineIcon />,
       description: 'Lead → Client'
     },

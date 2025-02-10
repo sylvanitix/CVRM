@@ -57,30 +57,35 @@ export const companies = [
   {
     id: 2,
     name: 'Yunico',
-    role: 'Growth Hacker • SaaS B2B',
+    role: 'Growth Lead & Product Manager • Yunico',
     status: 'En Poste',
-    skills: ['Growth Hacking', 'Marketing B2B', 'CRM', 'Automatisation', 'Social Selling'],
+    skills: ['Growth', 'Product', 'Communication digitale', 'Marketing', 'Management'],
     score: 100,
     period: 'Juin 2024 - Présent',
-    description: `Expert en Growth Marketing B2B focalisé sur l'optimisation des processus commerciaux et l'automatisation intelligente.
+    description: `Passionné par l'innovation et le développement B2B, j'ai développé une expertise unique qui combine growth marketing et product management. Mon parcours m'a permis de comprendre les enjeux complexes du marché B2B et de développer des solutions adaptées.
 
-🎯 Réalisations Principales :
-• Configuration avancée de HubSpot comme hub central avec personnalisation poussée des workflows
-• Développement d'une stratégie de prospection LinkedIn générant 100+ leads qualifiés par mois
-• Mise en place de séquences d'emails personnalisées avec un taux d'ouverture de 45%
-• Création d'un système de scoring leads multicritères
+📚 Formation :
+• M2 Communication digitale - ECS Paris (2023)
+• M1 Event, relations presse / publique - ECS Paris (2022)
+• Bachelor Communication & Marketing - ECS Paris (2019)
 
-💡 Optimisations & Automatisations :
-• Intégration complète de la stack marketing (HubSpot, Sales Navigator, Lemlist, Make)
-• Développement de templates de prospection personnalisés augmentant le taux de réponse de 80%
-• Création de workflows d'enrichissement et de qualification automatiques
-• Mise en place d'un système de reporting automatisé
+🎯 Growth & Product Management :
+• Développement et mise en œuvre de stratégies de croissance B2B
+• Gestion de produit et amélioration continue des fonctionnalités
+• Analyse des besoins clients et définition de la roadmap produit
+• Optimisation des processus de conversion et d'acquisition
 
-🚀 Résultats Mesurables :
-• Augmentation de 200% du pipeline commercial en 6 mois
-• Réduction de 70% du temps de prospection manuelle
-• Amélioration du taux de conversion de 35%
-• ROI marketing multiplié par 3`,
+💡 Leadership & Innovation :
+• Direction d'équipes pluridisciplinaires
+• Mise en place de méthodologies agiles
+• Innovation dans les approches marketing et produit
+• Développement de solutions B2B innovantes
+
+🚀 Résultats & Impact :
+• Croissance significative des métriques clés
+• Amélioration de la satisfaction client
+• Optimisation des processus internes
+• Développement de nouvelles fonctionnalités à forte valeur ajoutée`,
     location: 'À distance'
   },
   {
@@ -201,7 +206,7 @@ export const companies = [
   },
   {
     id: 7,
-    name: 'Epsilon eSports',
+    name: 'Epsilon Esport',
     role: 'Communication 360° • E-sport',
     status: 'Expérience Passée',
     skills: ['Événementiel', 'Communication', 'Gestion de projet', 'Relations Presse', 'Sponsoring'],
@@ -372,14 +377,19 @@ export default function Companies() {
                   </Box>
                 </TableCell>
                 <TableCell>
-                  <Chip 
+                  <Chip
                     label={company.status}
                     size="small"
-                    sx={{ 
-                      bgcolor: company.status === 'En Poste' ? '#203343' : 'grey.100',
-                      color: company.status === 'En Poste' ? '#fff' : 'text.secondary',
-                      fontWeight: company.status === 'En Poste' ? 500 : 400,
-                      '& .MuiChip-label': { px: 1 }
+                    sx={{
+                      bgcolor: company.status === 'En Poste' ? 'success.main' : 'rgba(0, 0, 0, 0.5)',
+                      color: company.status === 'En Poste' ? 'white' : 'grey.400',
+                      borderRadius: '4px',
+                      height: '24px',
+                      '& .MuiChip-label': {
+                        px: 1,
+                        py: 0.5,
+                        fontSize: '0.75rem',
+                      },
                     }}
                   />
                 </TableCell>
@@ -497,10 +507,16 @@ export default function Companies() {
                   <Chip 
                     label={selectedCompany.status}
                     size="small"
-                    sx={{ 
-                      bgcolor: selectedCompany.status === 'En Poste' ? '#203343' : 'grey.100',
-                      color: selectedCompany.status === 'En Poste' ? '#fff' : 'text.secondary',
-                      fontWeight: selectedCompany.status === 'En Poste' ? 500 : 400
+                    sx={{
+                      bgcolor: selectedCompany.status === 'En Poste' ? 'success.main' : 'rgba(0, 0, 0, 0.5)',
+                      color: selectedCompany.status === 'En Poste' ? 'white' : 'grey.400',
+                      borderRadius: '4px',
+                      height: '24px',
+                      '& .MuiChip-label': {
+                        px: 1,
+                        py: 0.5,
+                        fontSize: '0.75rem',
+                      },
                     }}
                   />
                   {selectedCompany.skills.map((skill, index) => (
